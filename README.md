@@ -1,5 +1,7 @@
 # Simple Poll System
 
+Try it here 👉 <https://simple-poll-system.pages.dev>
+
 This project serves as a proof of concept for learning purposes. Its objective is to create a real-time voting system that is both cost-effective and capable of handling large number of requests at the same time.
 
 To achieve this, I built the solution with [Cloudflare Pages](https://developers.cloudflare.com/pages), [Page Functions](https://developers.cloudflare.com/pages/functions/), and [Cloudflare D1](https://developers.cloudflare.com/d1/).
@@ -14,8 +16,7 @@ When designing the system, it is crucial to consider the frequency of API access
 
 > [!Important]
 > It is important to note that _D1 is currently in public beta_.  
-> It is not advisable to utilize beta products for large production workloads.  
-> If you find yourself in this scenario, please choose to use the upstream KV solution.  
+> It is not advisable to utilize beta products for large production workloads.    
 > Also, please star🌟 and watch👀 this repo to stay updated with our future modifications.
 
 ## Setup
@@ -97,11 +98,11 @@ wrangler d1 execute simple-poll-system --file=./init_database.sql
 > I hardcoded the table name in the code for this simple POC project.  
 > You can perform a project-wide search for `Poll1` and replace it with your desired table name. Alternatively, you can extract it to a variable.
 
-## Bind your D1 Database to your Cloudflare Pages
+### Bind your D1 Database to your Cloudflare Pages
 
 Go to your Cloudflare Pages project settings → Functions → D1 database bindings, and bind the `simple-poll-system` database to your page.
 
-## Deploy
+### Deploy
 
 Save the file and push a new commit into `master` and wait for the Cloudflare Page to deploy your webpage.
 
